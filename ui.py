@@ -16,3 +16,8 @@ def print_menu_option():
 (5). Exit""")
     answer = get_input("\nChoose option: ")
     return answer
+
+
+def print_character_statistics(char_stats):
+    string = "hp:{:}\texp:{:}\tdef:{:}\tatc:{:}\tlvl:{:}"
+    print(string.format(*char_stats.values()))
