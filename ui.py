@@ -1,5 +1,5 @@
 import os
-
+hero_position = [3,11]
 
 def get_input(question):
     answer = input(question)
@@ -31,3 +31,9 @@ def print_inventory(inventory):
     print("Inventory:")
     string = "{}, " * len(inventory)
     print(string.format(*inventory))
+
+
+def show_map(level_map):
+    
+    for line in level_map:
+        print("".join(line))
