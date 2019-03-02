@@ -1,6 +1,6 @@
 import ui
 
-
+# TODO get rid off print functions
 def add_character_stats():
     stats = {'hp': 10, 'exp': 0, 'def': 1, 'atc': 1, 'lvl': 1}
     print_character_statistics(stats)
