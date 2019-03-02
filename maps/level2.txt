@@ -1,0 +1,23 @@
+################################################################################################################################
+##              W                       BBBB                                                                                 ##
+ ##  RRR   RRRRRRRRRRBBBBBBBBBB       BBBBBBBB       RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR        ##
+  ##   RRRRR  RR       &    BBB     BBBBBBBBBBBB    RRRRRRRRRRRRRRRRRRRRRRR                               &                ##
+   ##      RRRR  RRR  RR   BB         BBBBBBBB     RRRRRRRRRRRRRRRRRRRRR   &################################################
+    ##  RR       RR  RR   BBB           BBBB      RRRRRRRRR                                                              ##
+     ##  RRRRRRRRR  RR   BBB                      RRRRRR                                                                ##
+      ##           RR   BBB                      RRRRR                                                                 ##
+       ##BBBB BBBB BB  BBBBB                    RRRR     #################################################            ##
+        ## BBBB  BBBB  BBBB                    RRR       #                                                           ##
+         ############  ################################# ##############################################################    
+          ## @                                         # #                                                         D####
+         ############################################### ## ###########################################################  
+        ##RRRRRRR                                        #                                                           ##
+       ##      RRRRRR         ###################################################################################     ##
+      ##   BBB     RRRRRR                                                                                              ##
+     ##   BB BBBBB      B                                                BBB BBBBBBBBBBBBBBBBBBBB                       ##
+    ##  BBB    B   B    B  RRRR                                       BBBBBB BBBBB   F   BBBBBBBBB                       ##
+   ##BBB  B BBBBBBBBBB  B     RRR                                  BBBBB     BBBBB BBBBBBBBBB                             ##
+  ##    &      B       BBBBB  RRRR                               BBBBBBB BBBBBBBBB BBBBBBB                                 ##
+ ##      BBBB BBB  BBB          RRRRR                         BBBBBBBBBB    &       BBBBBBB                                 ##
+##     C B           BBBBBBBBRRRRRRR                         BBBBBBBBBBBBBBBBBBBBBBBBBBB                                     ##
+#################################################################################################################################
