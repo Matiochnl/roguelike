@@ -7,6 +7,10 @@ def get_input(question):
     return answer
 
 
+def print_gane_instructions():
+    print("Press W A S D to move | #-wall, B-bush, R-river, @-hero, &-enemy, F-food, D-next level, W-weapon, C-clothes")
+
+
 def print_menu_option():
     print("""\n\nHammer of Justice:
 (1). Play game
@@ -19,5 +23,11 @@ def print_menu_option():
 
 
 def print_character_statistics(char_stats):
-    string = "hp:{:}\texp:{:}\tdef:{:}\tatc:{:}\tlvl:{:}"
+    string = "HP:{:}\tEXP:{:}\tDEF:{:}\tATC:{:}\tLVL:{:}"
     print(string.format(*char_stats.values()))
+
+
+def print_inventory(inventory):
+    print("Inventory:")
+    string = "{}, " * len(inventory)
+    print(string.format(*inventory))
