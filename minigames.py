@@ -1,29 +1,27 @@
 import random
+import ui
 
 
 def hotcold():
-    print("type a number ".upper() + "(1-100)")
+    print("Type a number ".upper() + "(1-100)")
 
-    numbers = random.randint(1,100)
-    #print(numbers)
+    numbers = random.randint(1, 100)
     answer = 0
     listt = []
     while answer != numbers:
         try:
-            answer = int(input("type a number:"))
+            answer = int(ui.get_input("Type a number:"))
             listt.append(answer)
             if answer == numbers:
-                file = open("/home/mateusz/codecool/roguelike_v2/ascii_art/congrats.txt", 'r')
-                print(file.read())
-                file.close()
+                load_ascii_art("ascii_art/congrats.txt")
             elif answer < numbers:
-                print("type bigger number")
+                print("Type bigger number")
             elif answer > numbers:
-                print("type smaller number")
+                print("Type smaller number")
         except ValueError:
-            print("type number , not letter")
+            print("Type number, not letter")
         if len(listt) == 20:
-            print("loser hahahah")
+            print("Loser hahahah")
             break
 
 
@@ -67,14 +65,8 @@ def rock():
         computer = t[randint(0, 2)]
     if len(how_many) >= 3:
         if how_many.count("W") > how_many.count("L"):
-            print("YOU WIN")
-            file = open("/home/mateusz/codecool/roguelike_v2/ascii_art/congrats.txt", 'r')
-            print(file.read())
-            file.close()
+            load_ascii_art("ascii_art/congrats.txt")
             return True
         else:
-            print("YOU LOSE")
-            file = open("/home/mateusz/codecool/roguelike_v2/ascii_art/lose.txt", 'r')
-            print(file.read())
-            file.close()
+            load_ascii_art("ascii_art/lose.txt")
             return False
