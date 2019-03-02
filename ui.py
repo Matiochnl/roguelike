@@ -1,5 +1,6 @@
 import os
-hero_position = [3,11]
+hero_position = [3, 11]
+
 
 def get_input(question):
     answer = input(question)
@@ -11,7 +12,7 @@ def print_gane_instructions():
     print("Press W A S D to move | #-wall, B-bush, R-river, @-hero, &-enemy, F-food, D-next level, W-weapon, C-clothes")
 
 
-def print_menu_option():
+def main_menu_options():
     print("""\n\nHammer of Justice:
 (1). Play game
 (2). How to play
@@ -34,6 +35,5 @@ def print_inventory(inventory):
 
 
 def show_map(level_map):
-    
     for line in level_map:
         print("".join(line))
