@@ -1,4 +1,5 @@
 import random
+import data_manager
 import ui
 
 
@@ -13,7 +14,7 @@ def hotcold():
             answer = int(ui.get_input("Type a number:"))
             listt.append(answer)
             if answer == numbers:
-                load_ascii_art("ascii_art/congrats.txt")
+                print(data_manager.load_ascii_art("ascii_art/congrats.txt"))
             elif answer < numbers:
                 print("Type bigger number")
             elif answer > numbers:
@@ -27,10 +28,10 @@ def hotcold():
 
 def rock():
     t = ["Rock", "Paper", "Scissors"]
-    computer = t[randint(0, 2)]
+    computer = t[random.randint(0, 2)]
     how_many = []
     while len(how_many) != 3:
-        player = input("Rock, Paper, Scissors?").capitalize()
+        player = ui.get_input("Rock, Paper, Scissors?").capitalize()
         if player == computer:
             print("Tie!")
         elif player == "Rock":
@@ -62,11 +63,11 @@ def rock():
                 print(how_many)
         else:
             print("That's not a valid play. Check your spelling!")
-        computer = t[randint(0, 2)]
+        computer = t[random.randint(0, 2)]
     if len(how_many) >= 3:
         if how_many.count("W") > how_many.count("L"):
-            load_ascii_art("ascii_art/congrats.txt")
+            print(data_manager.load_ascii_art("ascii_art/congrats.txt"))
             return True
         else:
-            load_ascii_art("ascii_art/lose.txt")
+            prin(data_manager.load_ascii_art("ascii_art/lose.txt"))
             return False
