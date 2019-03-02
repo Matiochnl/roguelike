@@ -1,11 +1,7 @@
 import os
+
+
 hero_position = [3, 11]
-
-
-def get_input(question):
-    answer = input(question)
-
-    return answer
 
 
 def print_gane_instructions():
@@ -19,7 +15,7 @@ def main_menu_options():
 (3). Highscore board
 (4). Credits
 (5). Exit""")
-    answer = get_input("\nChoose option: ")
+    answer = input("\nChoose option: ")
     return answer
 
 
@@ -37,3 +33,8 @@ def print_inventory(inventory):
 def show_map(level_map):
     for line in level_map:
         print("".join(line))
+
+
+def print_user_score(char_stats, play_time):
+    final_score = str(int(char_stats["EXP"] * 3.14 * round(play_time, 2)))
+    print(final_score)
