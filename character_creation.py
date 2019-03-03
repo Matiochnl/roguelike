@@ -13,7 +13,7 @@ def add_character_stats(statistic):
     ui.print_character_statistics(stats)
     points = 5
     while points > 0:
-        stat_to_add = input("Enter 'H', 'h', 'D', 'd' or 'A', 'a' to add statistic: ")
+        stat_to_add = input("""Enter H to add HP points, D to add DEF point and A to add ATC piont to statistic: """)
         if stat_to_add in ["h", "H"]:
             stats["hp"] += 2
         elif stat_to_add in ["D", "d"]:
