@@ -13,18 +13,18 @@ def main_menu():
         answer = ui.main_menu_options()
 
         if answer == '1':
-            back = ui.input("Press Enter to go back to main menu.")
+            back = input("Press Enter to go back to main menu.")
             answer = ""
         elif answer == '2':
-            back = ui.input("Press Enter to go back to main menu.")
+            back = input("Press Enter to go back to main menu.")
             answer = ""
         elif answer == '3':
             print(data_manager.load_ascii_art("howtoplay.txt"))
-            back = ui.input("Press Enter to go back to main menu.")
+            back = input("Press Enter to go back to main menu.")
             answer = ""
         elif answer == '4':
             print(data_manager.load_ascii_art("authors.txt"))
-            back = ui.input("Press Enter to go back to main menu.")
+            back = input("Press Enter to go back to main menu.")
             answer = ""
         elif answer == '5':
             quit()

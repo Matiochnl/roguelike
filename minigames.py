@@ -11,7 +11,7 @@ def hotcold():
     listt = []
     while answer != numbers:
         try:
-            answer = int(ui.input("Type a number:"))
+            answer = int(input("Type a number:"))
             listt.append(answer)
             if answer == numbers:
                 print(data_manager.load_ascii_art("ascii_art/congrats.txt"))
@@ -31,7 +31,7 @@ def rock():
     computer = t[random.randint(0, 2)]
     how_many = []
     while len(how_many) != 3:
-        player = ui.input("Rock, Paper, Scissors?").capitalize()
+        player = input("Rock, Paper, Scissors?").capitalize()
         if player == computer:
             print("Tie!")
         elif player == "Rock":
