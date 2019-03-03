@@ -90,4 +90,3 @@ def move_hero():
                 level_map[old_coordinates[1]][old_coordinates[0]] = "@"
                 ui.show_map(level_map)
 
-move_hero()
