@@ -40,10 +40,10 @@ def place_hero_new_pos(level_map, hero_coordinates):
     return level_map
 
 
-def handle_coordinates(get_char, hero_coordinates):
+def handle_coordinates(get_char, hero_coordinates, filename):
 
     result = hero_coordinates
-    level_map = data_manager.get_maps_from_file("maps/level1.txt")
+    level_map = data_manager.get_maps_from_file(filename)
     new_hero_coordinates = new_hero_pos(get_char, hero_coordinates)
     if obstacles(new_hero_coordinates, level_map):
         result = new_hero_coordinates
