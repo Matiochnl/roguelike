@@ -1,5 +1,5 @@
 import minigames
-import inventory
+import inv
 
 
 def interaction(new_hero_coordinates, level_map):
@@ -12,22 +12,22 @@ def interaction(new_hero_coordinates, level_map):
     return result
 
 
-def handle_interaction(new_hero_coordinates, items, char_stats, inventory):
-    if new_hero_coordinates == "W":
-        loot = items.items.weapons()
+def handle_interaction(character, items, char_stats, inventory):
+    if character == "W":
+        loot = items.weapons()
         char_stats["ATC"] += loot[1]
-        inventory.inventory.add_to_inventory(inventory, loot)
-    elif new_hero_coordinates == "F":
-        loot = items.items.food()
+        inv.add_to_inventory(inventory, loot)
+    elif character == "F":
+        loot = items.food()
         if char_stats["HP"] < 100:
             char_stats["HP"] += loot[1]
         if char_stats["HP"] > 100:
             char_stats["HP"] = 100
-    elif new_hero_coordinates == "C":
-        loot = items.items.clotches()
+    elif character == "C":
+        loot = items.clothes()
         char_stats["DEF"] += loot[1]
-        inventory.inventory.add_to_inventory(inventory, loot)
-    elif new_hero_coordinates == "&":
+        inv.add_to_inventory(inventory, loot)
+    elif character == "&":
         file_name = "ascii_art/mob.txt"
         minigames.hotcold()
 
