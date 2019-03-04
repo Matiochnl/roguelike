@@ -16,10 +16,10 @@ def main_menu():
         answer = ui.main_menu_options()
 
         if answer == '1':
-            inventory = ["apple", "knife", "hatchet"]
+            inventory = {}
             stats = character_creation.add_character_stats()
-            level_map = data_manager.get_maps_from_file("maps/level1.txt")
-            engine.start_engine(level_map, stats, inventory)
+            os.system("clear")
+            engine.start_engine(stats, inventory)
             back = input("Press Enter to go back to main menu.")
             answer = ""
         elif answer == '2':
