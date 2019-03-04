@@ -6,11 +6,7 @@ def weapons():
                    ("spear", 9), ("stone", 6)]
     return weapons_list[random.randint(0, len(weapons_list)-1)]
 
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> d1d0b6e5985e8f1a0a55bb80aa780e878d79d1e8
 def food():
     food_list = [("ham", 8), ("meat", 6), ("melon", 6), ("pear", 5),
                 ("potato", 5), ("green peas", 4)]

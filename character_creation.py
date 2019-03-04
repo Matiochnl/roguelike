@@ -8,7 +8,7 @@ def statistic():
     return stats
 
 
-def add_character_stats(statistic):
+def add_character_stats():
     stats = statistic()
     ui.print_character_statistics(stats)
     points = 5

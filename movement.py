@@ -21,13 +21,13 @@ def get_char_in_terminal():
     return char
 
 
-def move_hero():
+def move_hero(level_map, stats, inventory):
     
     old_coordinates = ui.hero_position
     new_pos =[]
     level_map = data_manager.get_maps_from_file("maps/level1.txt")
     level_map[old_coordinates[1]][old_coordinates[0]] = "@"
-    ui.show_map(level_map)
+    ui.print_level_map(level_map, stats, inventory)
     obstackles = ["#", "B", "R"]
     
     while True:
@@ -42,10 +42,10 @@ def move_hero():
                 old_coordinates.insert(1,new_pos[1])
                 os.system("clear")
                 level_map[new_pos[1]][new_pos[0]] = "@"
-                ui.show_map(level_map)
+                ui.print_level_map(level_map, stats, inventory)
             else:
                 level_map[old_coordinates[1]][old_coordinates[0]] = "@"
-                ui.show_map(level_map)
+                ui.print_level_map(level_map, stats, inventory)
 
         elif get_char == "s":
             os.system("clear")
@@ -57,10 +57,11 @@ def move_hero():
                 old_coordinates.insert(1,new_pos[1])
                 os.system("clear")
                 level_map[new_pos[1]][new_pos[0]] = "@"
-                ui.show_map(level_map)
+                ui.print_level_map(level_map, stats, inventory)
             else:
                 level_map[old_coordinates[1]][old_coordinates[0]] = "@"
-                ui.show_map(level_map)
+                ui.print_level_map(level_map, stats, inventory)
+
         elif get_char == "a":
             os.system("clear")
             level_map[old_coordinates[1]][old_coordinates[0]] = " "
@@ -71,10 +72,10 @@ def move_hero():
                 old_coordinates.insert(1,new_pos[1])
                 os.system("clear")
                 level_map[new_pos[1]][new_pos[0]] = "@"
-                ui.show_map(level_map)
+                ui.print_level_map(level_map, stats, inventory)
             else:
                 level_map[old_coordinates[1]][old_coordinates[0]] = "@"
-                ui.show_map(level_map)
+                ui.print_level_map(level_map, stats, inventory)
         elif get_char == "d":
             os.system("clear")
             level_map[old_coordinates[1]][old_coordinates[0]] = " "
@@ -85,8 +86,8 @@ def move_hero():
                 old_coordinates.insert(1,new_pos[1])
                 os.system("clear")
                 level_map[new_pos[1]][new_pos[0]] = "@"
-                ui.show_map(level_map)
+                ui.print_level_map(level_map, stats, inventory)
             else:
                 level_map[old_coordinates[1]][old_coordinates[0]] = "@"
-                ui.show_map(level_map)
+                ui.print_level_map(level_map, stats, inventory)
 

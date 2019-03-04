@@ -1,7 +1,10 @@
 import os
+import time
+
+import character_creation
 import ui
 import data_manager
-import time
+import movement
 
 
 def main_menu():
@@ -13,6 +16,10 @@ def main_menu():
         answer = ui.main_menu_options()
 
         if answer == '1':
+            inventory = ["apple", "knife", "hatchet"]
+            stats = character_creation.add_character_stats()
+            level_map = data_manager.get_maps_from_file("maps/level1.txt")
+            movement.move_hero(level_map, stats, inventory)
             back = input("Press Enter to go back to main menu.")
             answer = ""
         elif answer == '2':
@@ -29,7 +36,7 @@ def main_menu():
         elif answer == '5':
             quit()
         else:
-            ui.input("You must choose a valid option. Press Enter to go back to main menu.")
+            input("You must choose a valid option. Press Enter to go back to main menu.")
             answer = ""
 
 
