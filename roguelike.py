@@ -11,6 +11,7 @@ def main_menu():
     answer = ""
 
     while not answer:
+        map_iterator = 0
         os.system("clear")
         print(data_manager.load_ascii_art("ascii_art/castle.txt"))
         answer = ui.main_menu_options()
@@ -19,7 +20,7 @@ def main_menu():
             inventory = {}
             stats = character_creation.add_character_stats()
             os.system("clear")
-            engine.start_engine(stats, inventory)
+            engine.start_engine(stats, inventory, map_iterator)
             back = input("Press Enter to go back to main menu.")
             answer = ""
         elif answer == '2':

@@ -7,6 +7,7 @@ def hotcold():
     print("Type a number ".upper() + "(1-100)")
 
     numbers = random.randint(1, 100)
+    print(numbers)
     answer = 0
     listt = []
     while answer != numbers:
