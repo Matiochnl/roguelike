@@ -2,7 +2,7 @@ import minigames
 import inv
 
 
-def interaction(new_hero_coordinates, level_map):
+def check_interaction(new_hero_coordinates, level_map):
     result = False
     INTERACTION_ELEMENTS = ["W", "F", "C", "&", "D"]
     x_position = new_hero_coordinates[0]
