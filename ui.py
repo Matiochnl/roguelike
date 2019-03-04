@@ -6,7 +6,7 @@ import data_manager
 hero_position = [3, 11]
 
 
-def print_gane_instructions():
+def print_game_instructions():
     print("Press W A S D to move | #-wall, B-bush, R-river, @-hero, &-enemy, F-food, D-next level, W-weapon, C-clothes")
 
 

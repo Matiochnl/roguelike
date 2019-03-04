@@ -24,7 +24,7 @@ def get_char_in_terminal():
 def move_hero(level_map, stats, inventory):
     
     old_coordinates = ui.hero_position
-    new_pos =[]
+    new_pos = []
     level_map = data_manager.get_maps_from_file("maps/level1.txt")
     level_map[old_coordinates[1]][old_coordinates[0]] = "@"
     ui.print_level_map(level_map, stats, inventory)
@@ -35,11 +35,11 @@ def move_hero(level_map, stats, inventory):
         if get_char == "w":
             os.system("clear")
             level_map[old_coordinates[1]][old_coordinates[0]] = " "
-            new_pos.insert(0,old_coordinates[0])
-            new_pos.insert(1,old_coordinates[1] - 1)
+            new_pos.insert(0, old_coordinates[0])
+            new_pos.insert(1, old_coordinates[1] - 1)
             if level_map[new_pos[1]][new_pos[0]] not in obstackles:
-                old_coordinates.insert(0,new_pos[0])
-                old_coordinates.insert(1,new_pos[1])
+                old_coordinates.insert(0, new_pos[0])
+                old_coordinates.insert(1, new_pos[1])
                 os.system("clear")
                 level_map[new_pos[1]][new_pos[0]] = "@"
                 ui.print_level_map(level_map, stats, inventory)
@@ -50,11 +50,11 @@ def move_hero(level_map, stats, inventory):
         elif get_char == "s":
             os.system("clear")
             level_map[old_coordinates[1]][old_coordinates[0]] = " "
-            new_pos.insert(0,old_coordinates[0])
-            new_pos.insert(1,old_coordinates[1] + 1)
+            new_pos.insert(0, old_coordinates[0])
+            new_pos.insert(1, old_coordinates[1] + 1)
             if level_map[new_pos[1]][new_pos[0]] not in obstackles:
-                old_coordinates.insert(0,new_pos[0])
-                old_coordinates.insert(1,new_pos[1])
+                old_coordinates.insert(0, new_pos[0])
+                old_coordinates.insert(1, new_pos[1])
                 os.system("clear")
                 level_map[new_pos[1]][new_pos[0]] = "@"
                 ui.print_level_map(level_map, stats, inventory)
@@ -65,11 +65,11 @@ def move_hero(level_map, stats, inventory):
         elif get_char == "a":
             os.system("clear")
             level_map[old_coordinates[1]][old_coordinates[0]] = " "
-            new_pos.insert(0,old_coordinates[0] - 1)
-            new_pos.insert(1,old_coordinates[1])
+            new_pos.insert(0, old_coordinates[0] - 1)
+            new_pos.insert(1, old_coordinates[1])
             if level_map[new_pos[1]][new_pos[0]] not in obstackles:
-                old_coordinates.insert(0,new_pos[0])
-                old_coordinates.insert(1,new_pos[1])
+                old_coordinates.insert(0, new_pos[0])
+                old_coordinates.insert(1, new_pos[1])
                 os.system("clear")
                 level_map[new_pos[1]][new_pos[0]] = "@"
                 ui.print_level_map(level_map, stats, inventory)
@@ -79,11 +79,11 @@ def move_hero(level_map, stats, inventory):
         elif get_char == "d":
             os.system("clear")
             level_map[old_coordinates[1]][old_coordinates[0]] = " "
-            new_pos.insert(0,old_coordinates[0] + 1)
-            new_pos.insert(1,old_coordinates[1])
+            new_pos.insert(0, old_coordinates[0] + 1)
+            new_pos.insert(1, old_coordinates[1])
             if level_map[new_pos[1]][new_pos[0]] not in obstackles:
-                old_coordinates.insert(0,new_pos[0])
-                old_coordinates.insert(1,new_pos[1])
+                old_coordinates.insert(0, new_pos[0])
+                old_coordinates.insert(1, new_pos[1])
                 os.system("clear")
                 level_map[new_pos[1]][new_pos[0]] = "@"
                 ui.print_level_map(level_map, stats, inventory)

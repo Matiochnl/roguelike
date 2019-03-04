@@ -23,6 +23,7 @@ def main_menu():
             back = input("Press Enter to go back to main menu.")
             answer = ""
         elif answer == '2':
+            ui.print_game_instructions()
             back = input("Press Enter to go back to main menu.")
             answer = ""
         elif answer == '3':
