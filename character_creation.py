@@ -1,10 +1,9 @@
 import ui
 import os
-# TODO get rid off print functions
 
 
 def statistic():
-    stats = {'hp': 10, 'exp': 0, 'def': 1, 'atc': 1, 'lvl': 1}
+    stats = {'HP': 10, 'EXP': 0, 'DEF': 1, 'ATC': 1, 'LVL': 1}
     return stats
 
 
@@ -16,14 +15,13 @@ def add_character_stats():
         ui.print_character_statistics(stats)
         stat_to_add = input("""Enter H to add HP points, D to add DEF point and A to add ATC piont to statistic: """)
         if stat_to_add in ["h", "H"]:
-            stats["hp"] += 2
+            stats["HP"] += 2
         elif stat_to_add in ["D", "d"]:
-            stats["def"] += 1
+            stats["DEF"] += 1
         elif stat_to_add in ["A", "a"]:
-            stats["atc"] += 1
+            stats["ATC"] += 1
         points -= 1
-        
+
         os.system("clear")
-        
-        
+
     return stats
