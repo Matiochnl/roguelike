@@ -33,14 +33,10 @@ def start_engine(char_stats, inventory, map_iterator):
         if interaction.check_interaction(new_hero_coordinates, level_map):
             character = get_character_at_position(level_map, new_hero_coordinates)
             inventory = interaction.handle_interaction(character, items_to_gather, char_stats, inventory)
-<<<<<<< HEAD
-
-=======
             if map_iterator < 4 and character == "D":
                 map_iterator += 1
                 level_map = data_manager.get_maps_from_file(MAPS[map_iterator])
                 hero_coordinates = HERO_COORDINATES[map_iterator]
->>>>>>> ba957ec8bdec58d01aa80f5563031ceb4f62205a
             if game_won != False:
                 level_map = movement.map_with_updated_hero_pos(get_char, level_map, hero_coordinates, new_hero_coordinates)
                 ui.print_level_map(level_map, char_stats, inventory)
