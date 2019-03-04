@@ -4,7 +4,7 @@ import time
 import character_creation
 import ui
 import data_manager
-import movement
+import engine
 
 
 def main_menu():
@@ -19,7 +19,7 @@ def main_menu():
             inventory = ["apple", "knife", "hatchet"]
             stats = character_creation.add_character_stats()
             level_map = data_manager.get_maps_from_file("maps/level1.txt")
-            movement.move_hero(level_map, stats, inventory)
+            engine.start_engine(level_map, stats, inventory)
             back = input("Press Enter to go back to main menu.")
             answer = ""
         elif answer == '2':
