@@ -9,10 +9,11 @@ def statistic():
 
 
 def add_character_stats():
+    os.system("clear")
     stats = statistic()
-    ui.print_character_statistics(stats)
     points = 5
     while points > 0:
+        ui.print_character_statistics(stats)
         stat_to_add = input("""Enter H to add HP points, D to add DEF point and A to add ATC piont to statistic: """)
         if stat_to_add in ["h", "H"]:
             stats["hp"] += 2
@@ -21,7 +22,8 @@ def add_character_stats():
         elif stat_to_add in ["A", "a"]:
             stats["atc"] += 1
         points -= 1
+        
         os.system("clear")
-        ui.print_character_statistics(stats)
-        print("Start movement to play")
+        
+        
     return stats
