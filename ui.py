@@ -1,5 +1,7 @@
 import os
 
+import data_manager
+
 
 hero_position = [3, 11]
 
@@ -38,3 +40,14 @@ def show_map(level_map):
 def print_user_score(char_stats, play_time):
     final_score = str(int(char_stats["EXP"] * 3.14 * round(play_time, 2)))
     print(final_score)
+
+
+def print_level_map(level_map, char_stats, inv):
+    """
+    Display map to user
+    :param level_map: list of lists: map from text file or updated when program is running
+    """
+    print_character_statistics(char_stats)
+
+    for line in level_map:
+        print("".join(line))
