@@ -5,7 +5,6 @@ import ui
 import movement
 import items_to_gather
 import interaction
-
 HERO_COORDINATES = [[3, 11], [13, 11], [1, 1]]
 END_POSITION = [[104, 11], [114, 11], [11, 7]]
 MAPS = ['maps/level1.txt', 'maps/level2.txt', 'maps/level3.txt']
