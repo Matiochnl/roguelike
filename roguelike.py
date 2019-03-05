@@ -24,11 +24,10 @@ def main_menu():
             back = input("Press Enter to go back to main menu.")
             answer = ""
         elif answer == '2':
-            ui.print_game_instructions()
+            print(data_manager.load_ascii_art("howtoplay.txt"))
             back = input("Press Enter to go back to main menu.")
             answer = ""
         elif answer == '3':
-            print(data_manager.load_ascii_art("howtoplay.txt"))
             back = input("Press Enter to go back to main menu.")
             answer = ""
         elif answer == '4':
