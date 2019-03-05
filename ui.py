@@ -22,7 +22,7 @@ def main_menu_options():
 
 
 def print_character_statistics(char_stats):
-    string = "HP:{:}\tEXP:{:}\tDEF:{:}\tATC:{:}\tLVL:{:}"
+    string = "HP:{:}\t\tEXP:{:}\t\tDEF:{:}\t\tATC:{:}\t\tLVL:{:}"
     print(string.format(*char_stats.values()))
 
 

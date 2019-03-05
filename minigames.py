@@ -1,25 +1,37 @@
 import random
 import data_manager
 import ui
+import os
+import engine
 
 
-def hotcold():
-    print("Type a number ".upper() + "(1-100)")
+def hotcold(map_iterator, char_stats):
+    
 
     numbers = random.randint(1, 100)
     print(numbers)
     answer = 0
     listt = []
-    while answer != numbers:
+    if map_iterator < 2:
+        damage = 5
+    else:
+        damage = 10
+    while answer != numbers and char_stats["HP"] > 0:
+        ui.print_character_statistics(char_stats)
+        print("Type a number ".upper() + "(1-100)")
+        
         try:
             answer = int(input("Type a number:"))
+            os.system("clear")
             listt.append(answer)
             if answer == numbers:
                 print(data_manager.load_ascii_art("ascii_art/congrats.txt"))
             elif answer < numbers:
                 print("Type bigger number")
+                char_stats["HP"] = char_stats["HP"] - damage
             elif answer > numbers:
                 print("Type smaller number")
+                char_stats["HP"] = char_stats["HP"] - damage
         except ValueError:
             print("Type number, not letter")
         if len(listt) == 20:

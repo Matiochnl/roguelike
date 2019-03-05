@@ -12,7 +12,7 @@ def check_interaction(new_hero_coordinates, level_map):
     return result
 
 
-def handle_interaction(character, items, char_stats, inventory):
+def handle_interaction(character, items, char_stats, inventory, map_iterator):
     if character == "W":
         loot = items.weapons()
         char_stats["ATC"] += loot[1]
@@ -29,6 +29,6 @@ def handle_interaction(character, items, char_stats, inventory):
         inv.add_to_inventory(inventory, loot)
     elif character == "&":
         file_name = "ascii_art/mob.txt"
-        minigames.hotcold()
+        minigames.hotcold(map_iterator, char_stats)
 
     return inventory
