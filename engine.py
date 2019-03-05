@@ -20,7 +20,6 @@ def get_character_at_position(level_map, new_hero_coordinates):
 
 
 def start_engine(char_stats, inventory, map_iterator):
-
     get_char = ""
     hero_coordinates = HERO_COORDINATES[map_iterator]
     level_map = data_manager.get_maps_from_file(MAPS[map_iterator])

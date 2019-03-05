@@ -1,4 +1,5 @@
 import os
+
 import data_manager
 import ui
 
@@ -22,7 +23,6 @@ def get_char_in_terminal():
 
 
 def obstacles(new_hero_coordinates, level_map):
-
     result = True
     obstackles = ["#", "B", "R"]
     x_position = new_hero_coordinates[0]
@@ -41,7 +41,6 @@ def place_hero_new_pos(level_map, hero_coordinates):
 
 
 def handle_coordinates(get_char, hero_coordinates, filename):
-
     result = hero_coordinates
     level_map = data_manager.get_maps_from_file(filename)
     new_hero_coordinates = new_hero_pos(get_char, hero_coordinates)
@@ -66,7 +65,6 @@ def new_hero_pos(get_char, hero_coordinates):
 
 
 def map_with_updated_hero_pos(get_char, level_map, old_hero_coordinates, new_hero_coordinates):
-    
     if get_char in ["w", "s", "a", "d"]:
         updated_hero_pos = hero_move(level_map, old_hero_coordinates, new_hero_coordinates)     
         return updated_hero_pos
@@ -74,14 +72,12 @@ def map_with_updated_hero_pos(get_char, level_map, old_hero_coordinates, new_her
 
 
 def hero_move(level_map, old_hero_coordinates, new_hero_coordinates):
-    
     delete_old_here_pos = delete_old_hero_position(level_map, old_hero_coordinates)
     updated_level_map = place_hero_new_pos(delete_old_here_pos, new_hero_coordinates)
     return updated_level_map
 
 
 def delete_old_hero_position(level_map, old_hero_coordinates):
-
     x_position = old_hero_coordinates[0]
     y_position = old_hero_coordinates[1]
     level_map[y_position][x_position] = " "

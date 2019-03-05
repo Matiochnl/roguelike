@@ -1,5 +1,6 @@
-import ui
 import os
+
+import ui
 
 
 def statistic():

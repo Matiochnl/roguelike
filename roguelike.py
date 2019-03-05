@@ -21,6 +21,7 @@ def main_menu():
             stats = character_creation.add_character_stats()
             os.system("clear")
             engine.start_engine(stats, inventory, map_iterator)
+            print(data_manager.load_ascii_art("ascii_art/game_won.txt"))
             back = input("Press Enter to go back to main menu.")
             answer = ""
         elif answer == '2':

@@ -1,13 +1,12 @@
 import random
+import os
+
 import data_manager
 import ui
-import os
 import engine
 
 
 def hotcold(map_iterator, char_stats, character):
-    
-
     numbers = random.randint(1, 100)
     print(numbers)
     answer = 0
