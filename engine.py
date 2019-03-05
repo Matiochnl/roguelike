@@ -45,6 +45,7 @@ def start_engine(char_stats, inventory, map_iterator):
                 level_map = movement.map_with_updated_hero_pos(get_char, level_map, hero_coordinates, new_hero_coordinates)
                 ui.print_level_map(level_map, char_stats, inventory)
             if map_iterator < 2 and character == "D":
+                char_stats["LVL"] = char_stats["LVL"] + 1
                 map_iterator += 1
                 level_map = data_manager.get_maps_from_file(MAPS[map_iterator])
                 hero_coordinates = HERO_COORDINATES[map_iterator]   
