@@ -5,14 +5,14 @@ import os
 import engine
 
 
-def hotcold(map_iterator, char_stats):
+def hotcold(map_iterator, char_stats, character):
     
 
     numbers = random.randint(1, 100)
     print(numbers)
     answer = 0
     listt = []
-    if map_iterator < 2:
+    if character == "&":
         damage = 5
     else:
         damage = 10
