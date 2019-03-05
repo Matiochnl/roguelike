@@ -28,7 +28,6 @@ def handle_interaction(character, items, char_stats, inventory, map_iterator):
         char_stats["DEF"] += loot[1]
         inv.add_to_inventory(inventory, loot)
     elif character == "&":
-        print(data_manager.load_ascii_art("ascii_art/mob.txt"))
         minigames.hotcold(map_iterator, char_stats, character)
 
     return inventory

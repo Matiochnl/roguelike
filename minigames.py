@@ -19,6 +19,7 @@ def hotcold(map_iterator, char_stats, character):
     while answer != numbers and char_stats["HP"] > 0:
         ui.print_character_statistics(char_stats)
         print("Type a number ".upper() + "(1-100)")
+        print(data_manager.load_ascii_art("ascii_art/mob.txt"))
         
         try:
             answer = int(input("Type a number:"))
