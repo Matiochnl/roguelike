@@ -11,7 +11,6 @@ def hotcold(map_iterator, char_stats, character):
     numbers = random.randint(1, 100)
     print(numbers)
     answer = 0
-    listt = []
     if character == "&":
         damage = 5
     else:
@@ -19,12 +18,13 @@ def hotcold(map_iterator, char_stats, character):
     while answer != numbers and char_stats["HP"] > 0:
         ui.print_character_statistics(char_stats)
         print("Type a number ".upper() + "(1-100)")
-        print(data_manager.load_ascii_art("ascii_art/mob.txt"))
-        
+        if character == "&":
+            print(data_manager.load_ascii_art("ascii_art/mob.txt"))
+        else:
+            print(data_manager.load_ascii_art("ascii_art/finalbos.txt"))
         try:
             answer = int(input("Type a number:"))
             os.system("clear")
-            listt.append(answer)
             if answer == numbers:
                 print(data_manager.load_ascii_art("ascii_art/congrats.txt"))
             elif answer < numbers:
@@ -35,9 +35,6 @@ def hotcold(map_iterator, char_stats, character):
                 char_stats["HP"] = char_stats["HP"] - damage
         except ValueError:
             print("Type number, not letter")
-        if len(listt) == 20:
-            print("Loser hahahah")
-            break
 
 
 def rock():
