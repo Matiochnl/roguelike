@@ -40,7 +40,7 @@ def start_engine(char_stats, inventory, map_iterator):
             if char_stats["HP"] <= 0:
                 os.system("clear")
                 game_won = False
-                print("Game Over")
+                print(data_manager.load_ascii_art("ascii_art/game_over.txt"))
                 
             if game_won != False and map_iterator <= 2:
                 level_map = movement.map_with_updated_hero_pos(get_char, level_map, hero_coordinates, new_hero_coordinates)
