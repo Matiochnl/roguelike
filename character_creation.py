@@ -3,7 +3,7 @@ import os
 
 
 def statistic():
-    stats = {'HP': 10, 'EXP': 0, 'DEF': 1, 'ATC': 1, 'LVL': 1}
+    stats = {'HP': 75, 'EXP': 0, 'DEF': 1, 'ATC': 1, 'LVL': 1}
     return stats
 
 
