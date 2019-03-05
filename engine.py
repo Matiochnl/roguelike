@@ -5,6 +5,8 @@ import ui
 import movement
 import items_to_gather
 import interaction
+import minigames
+
 HERO_COORDINATES = [[3, 11], [13, 11], [1, 1]]
 END_POSITION = [[104, 11], [114, 11], [11, 7]]
 MAPS = ['maps/level1.txt', 'maps/level2.txt', 'maps/level3.txt']
@@ -36,7 +38,7 @@ def start_engine(char_stats, inventory, map_iterator):
             if map_iterator == 2 and character == "D":
                 os.system("clear")
                 game_won = False
-                print("Boss")
+                minigames.hotcold(map_iterator, char_stats, character)
             if char_stats["HP"] <= 0:
                 os.system("clear")
                 game_won = False
